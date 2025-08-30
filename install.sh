@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Vars
+## VARS ##
 SYS_USER=$(whoami)
 DATE=$(date +%Y-%m-%d)
 DOWNLOAD_DIR="$(pwd)"
