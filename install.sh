@@ -1,11 +1,23 @@
 #!/bin/bash
 
-## DOWNLOAD AND INSTALL ANDROID STUDIO ON LINUX ##
-
 # Vars
 SYS_USER=$(whoami)
+DATE=$(date +%Y-%m-%d)
 DOWNLOAD_DIR="$(pwd)"
 JSON_URL="https://developer.android.com/studio"
+
+## BANNER ##
+echo "╔══════════════════════════════════════════════╗"
+echo "║         ANDROID STUDIO AUTO INSTALLER        ║"
+echo "║         Powered by BASH & CURL               ║"
+echo "╚══════════════════════════════════════════════╝"
+echo "[*] Date: $(DATE)"
+echo "[*] User: $(SYS_USER)"
+echo "[*] Author: https://github.com/JoseDev155"
+echo ""
+
+
+## DOWNLOAD AND INSTALL ANDROID STUDIO ON LINUX ##
 
 echo "[+] Searching the latest version of Android Studio..."
 
