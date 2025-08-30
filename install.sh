@@ -67,3 +67,35 @@ echo "..."
 ## CEATE DESKTOP ENTRY ##
 echo "[+] Creating desktop entry..."
 DESKTOP_FILE="/usr/share/applications/android-studio.desktop"
+
+# Create the desktop entry file
+if [ "$SYS_USER" == "root"]; then
+    echo "[Desktop Entry]
+    Name=Android Studio
+    Comment=Android Studio IDE for Linux
+    Type=Application
+    Icon=$INSTALL_DIR/android-studio/bin/studio.png
+    Exec=$INSTALL_DIR/android-studio/bin/studio.sh
+    StartupNotify=true
+    Terminal=false
+    Categories=Development;IDE;" > "$DESKTOP_FILE"
+elif [ "$SYS_USER" != "root"]; then
+    sudo echo "[Desktop Entry]
+    Name=Android Studio
+    Comment=Android Studio IDE for Linux
+    Type=Application
+    Icon=$INSTALL_DIR/android-studio/bin/studio.png
+    Exec=$INSTALL_DIR/android-studio/bin/studio.sh
+    StartupNotify=true
+    Terminal=false
+    Categories=Development;IDE;" > "$DESKTOP_FILE"
+fi
+
+if [ "$SYS_USER" == "root"]; then
+    chmod +x $DESKTOP_FILE
+elif [ "$SYS_USER" != "root"]; then
+    sudo chmod +x $DESKTOP_FILE
+fi
+echo "Desktop entry created at $DESKTOP_FILE"
+echo "You can now launch Android Studio from your application menu"
+echo "[+] INSTALLATION AND CONFIGURATION OF ANDROID STUDIO FOR LINUX FINISHED"
