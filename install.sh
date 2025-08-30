@@ -16,7 +16,6 @@ echo "[*] User: $(SYS_USER)"
 echo "[*] Author: https://github.com/JoseDev155"
 echo ""
 
-
 ## DOWNLOAD AND INSTALL ANDROID STUDIO ON LINUX ##
 
 echo "[+] Searching the latest version of Android Studio..."
