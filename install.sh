@@ -63,3 +63,7 @@ echo "Deleting android-studio.tar.gz..."
 
 echo "[+] Installation finished in $INSTALL_DIR"
 echo "..."
+
+## CEATE DESKTOP ENTRY ##
+echo "[+] Creating desktop entry..."
+DESKTOP_FILE="/usr/share/applications/android-studio.desktop"
