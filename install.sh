@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ## VARS ##
+declare INSTALL_DIR="/opt/"
 SYS_USER=$(whoami)
 DATE=$(date +%Y-%m-%d)
 DOWNLOAD_DIR="$(pwd)"
