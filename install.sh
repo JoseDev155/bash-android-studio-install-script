@@ -53,19 +53,17 @@ read -p "ENTER to default (/opt/android-studio): " USER_PATH
 
 if [ "$USER_PATH" == "" && "$SYS_USER" == "root"]; then
     echo "[+] Extracting in $INSTALL_DIR..."
-    mkdir -p "$INSTALL_DIR"
     tar -xvzf "$DOWNLOAD_DIR/android-studio.tar.gz" -C "$INSTALL_DIR"
 elif [ "$USER_PATH" == "" && "$SYS_USER" != "root"]; then
     echo "[+] Extracting in $INSTALL_DIR..."
-    sudo mkdir -p "$INSTALL_DIR"
     sudo tar -xvzf "$DOWNLOAD_DIR/android-studio.tar.gz" -C "$INSTALL_DIR"
 elif [ "$USER_PATH" != "" && "$SYS_USER" == "root"]; then
-    INSTALL_DIR="$USER_PATH/android-studio"
+    INSTALL_DIR="$USER_PATH/"
     echo "[+] Extracting in $INSTALL_DIR..."
     mkdir -p "$INSTALL_DIR"
     tar -xvzf "$DOWNLOAD_DIR/android-studio.tar.gz" -C "$INSTALL_DIR"
 elif [ "$USER_PATH" != "" && "$SYS_USER" != "root"]; then
-    INSTALL_DIR="$USER_PATH/android-studio"
+    INSTALL_DIR="$USER_PATH/"
     echo "[+] Extracting in $INSTALL_DIR..."
     sudo mkdir -p "$INSTALL_DIR"
     sudo tar -xvzf "$DOWNLOAD_DIR/android-studio.tar.gz" -C "$INSTALL_DIR"
