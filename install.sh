@@ -70,6 +70,7 @@ elif [ "$USER_PATH" != "" && "$SYS_USER" != "root"]; then
 fi
 
 echo "Deleting android-studio.tar.gz..."
+rm -r "$DOWNLOAD_DIR/android-studio.tar.gz"
 
 echo "[+] Installation finished in $INSTALL_DIR"
 echo "..."
